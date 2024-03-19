@@ -1,7 +1,7 @@
 :root {
     --clr-primary-400: hsl(221, 88%, 55%);
     --clr-secondary-300: hsl(240, 6%, 53%);
-
+    --clr-accent-400: hsl(221, 88%, 40%);
 
     --clr-neutral-900: hsl(0, 0%, 0%);
     --clr-neutral-300: hsl(240, 6%, 90%);
@@ -10,6 +10,7 @@
 
     --clr-purple : hsl(271, 60%, 53%);
     --clr-lt-green : hsl(170, 71%, 46%);
+    --clr-green : hsl(149, 100%, 36.3%);
 
     --ff-regular: 'Roboto' , 'Open Sans', 'Helvetica Neue', sans-serif;
 
@@ -21,9 +22,8 @@
     --fs-large: 1.5rem;
 
     --pd-regular: 1rem;
+    --pd-large: 2rem;
 }
-
-
 
 /*****************CSS RESET******************/
 /*
@@ -83,7 +83,7 @@ span {
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 5fr;
-    grid-template-rows: 8vh 1fr;
+    grid-template-rows: 70px 1fr;
     grid-template-areas:
         "sidebar header"
         "sidebar main"
@@ -256,8 +256,35 @@ span {
     margin-bottom: 1rem;
 }
 
+.main > .main-header p {
+  color: var(--clr-secondary-300);
+}
+
 .main > .main-header > div:last-child {
     margin-top: auto;
+}
+.main > .main-header > div:last-child > button ion-icon {
+  font-size: var(--fs-regular);
+}
+
+.main > .main-header > div:last-child > button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--clr-primary-400);
+  color: var(--clr-neutral-100);
+  font-size: var(--fs-small);
+  padding: 0.4rem 0.8rem;
+}
+
+.main > .main-header > div:last-child > button:hover {
+  cursor: pointer;
+}
+
+.main > .main-header > div:last-child > button:active {
+  background-color: var(--clr-accent-400);
 }
 
 .main > .statistics-container {
@@ -278,13 +305,56 @@ span {
   justify-content: space-between;
 }
 
+.card > .card-header p, .card h5 {
+  color: var(--clr-secondary-300);
+  font-size: var(--fs-small);
+}
+
+.card > .card-header > ion-icon {
+  font-size: var(--fs-large);
+}
+
+.card > .card-header > div > ion-icon {
+  cursor: pointer;
+}
+
 .card > .card-header > .filters{
   align-self: end;
+  border-radius: 10px;
+  border: 1px solid var(--clr-neutral-300);
+  padding-inline: 2px;
+  padding-block: 2px;
+}
+
+.card > .card-header > .filters > button {
+  border: none;
+  border-radius: 6px;
+  font-size: var(--fs-small);
+  color: var(--clr-secondary-300);
+  background-color: transparent;
+  padding-block: 4px ;
+
+}
+.card > .card-header > .filters > button:hover {
+  cursor: pointer;
+}
+.card > .card-header > .filters > .active {
+  background-color: var(--clr-primary-400);
+  color: var(--clr-neutral-100);
+  border-radius: 6px;
+  box-shadow: 0 0 1px var(--clr-primary-400);
 }
 
 .card > .card-body {
   flex-grow: 1;
+}
+.card > .card-body .asset {
+  font-size: var(--fs-large);
+}
 
+.card > .card-body .asset-index {
+  font-size: var(--fs-small);
+  color: var(--clr-green) ;
 }
 
 .card, .card .secondary-card {
@@ -303,6 +373,37 @@ span {
 
 .card  > .card-body .secondary-card > .header {
   grid-area: 1 / 1 / 2 / 2;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0;
+}
+
+.card  > .card-body .secondary-card:hover {
+  cursor: pointer;
+  box-shadow: 0 0 3px var(--clr-neutral-300);
+}
+
+.card  > .card-body .secondary-card > .header > div p{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 10vw;
+}
+.card  > .card-body .secondary-card > .header > div:first-child {
+  flex: 1;
+  height: 60px;
+  width: 60px;
+  border: 2px solid var(--clr-secondary-300);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--clr-neutral-300);
+}
+
+.card  > .card-body .secondary-card > .header > div:last-child {
+  flex: 2;
 }
 
 .card  > .card-body .secondary-card > .body {
@@ -317,13 +418,32 @@ span {
 .card:nth-child(4) > .card-body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .card:nth-child(4) > .card-body > .bar-chart {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 1rem
+}
+
+.card:nth-child(4) > .card-body > .bar-chart
+> .header {
+  padding: 0;
+}
+
+.card:nth-child(4) > .card-body > .bar-chart
+> .header
+> div span {
+  font-size: var(--fs-small);
+  color: var(--clr-secondary-300);
+}
+
+.card:nth-child(4) > .card-body > .bar-chart
+> .header
+> div span:first-child {
+  color: var(--clr-green);
 }
 
 .card:nth-child(4) > .card-body > .bar-chart > .body {
@@ -353,19 +473,23 @@ span {
   background-color: var(--clr-secondary-300);
 }
 
-.clr-primary {
+.clr-primary, .percentage-market {
+  --_border-clr : var(--clr-primary-400);
   color: var(--clr-primary-400);
 }
 
-.clr-purple {
+.clr-purple, .percentage-stocks {
+  --_border-clr : var(--clr-purple);
   color: var(--clr-purple);
 }
 
-.clr-lt-green {
+.clr-lt-green, .percentage-bonds {
+  --_border-clr : var(--clr-lt-green);
   color: var(--clr-lt-green);
 }
 
-.clr-secondary {
+.clr-secondary, .percentage-sharia {
+  --_border-clr : var(--clr-secondary-300);
   color: var(--clr-secondary-300);
 }
 
@@ -373,6 +497,8 @@ span {
   display: grid;
   grid-template-columns: 10fr 1fr 1fr;
   grid-template-rows: repeat(4, 1fr);
+  align-items: center;
+  gap:0.5rem;
   width: 100%;
 }
 
@@ -381,9 +507,25 @@ span {
 > .bar-chart
 > .footer
 > .percentage {
+  border: 2px solid var(--_border-clr, var(--clr-secondary-300));
+  border-radius: 5px;
+  padding-inline: 5px;
+  font-size: var(--fs-small);
   justify-self: end;
+  margin-left: 10px;
 }
 
+.card:nth-child(4)
+> .card-body
+> .bar-chart
+> .footer
+> .item {
+  font-size: var(--fs-small);
+  color: var(--clr-secondary-300);
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
 
 .card:nth-child(4)
 > .card-body
@@ -392,9 +534,6 @@ span {
 > .value {
   justify-self: end;
 }
-
-
-
 
 .card:nth-child(6) > .card-body {
   display: grid;
@@ -434,12 +573,16 @@ span {
     grid-column: 12 span;
 }
 
+.flex-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .logo {
     height: 40px;
     width: 40px;
 }
-
 
 .not-available {
   height: 100%;
