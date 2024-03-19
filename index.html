@@ -10,23 +10,26 @@
     <title>Finvest</title>
 </head>
 <body>
+    <div class="not-available">
+        <div>Not available in this screen size !</div>
+    </div>
     <div class="root-container">
         <header class="header">
 
-            <input type="search" name="search" id="search" placeholder="Search Funds ...">
+            <input type="search" autocomplete='off' name="search" id="search" placeholder="Search Funds ...">
 
             <div class="header-menu">
                 <div class="notif-area">
-                    <button id="notif-btn"><ion-icon name="notifications"></ion-icon></button>
-                    <button id="msg-btn"><ion-icon name="chatbox-ellipses"></ion-icon></button>
+                    <button id="notif-btn"><ion-icon name="notifications" aria-hidden="true"></ion-icon></button>
+                    <button id="msg-btn"><ion-icon name="chatbox-ellipses" aria-hidden="true"></ion-icon></button>
                 </div>
                 <div class="profile-info">
                     <img src="./assets/images/profile-pic.png" alt="profile-pic" class="profile-pic">
                     <div>
-                        <div class="profile-name">Ali Oumlal</div>
+                        <div class="profile-name">Ali O.</div>
                         <div class="product-name">Finvest Plus</div>
                     </div>
-                    <button id="profile-dropdown"><ion-icon name="chevron-down"></ion-icon></button>
+                    <button id="profile-dropdown"><ion-icon name="chevron-down" aria-hidden="true"></ion-icon></button>
                 </div>
             </div>
         </header>
@@ -37,42 +40,42 @@
                 <span>Finvest</span>
             </header>
             <ul class="nav-bar">
-                <li class="nav-item">
-                    <span><ion-icon name="grid"></ion-icon></span>
+                <li class="nav-item active">
+                    <ion-icon name="grid" aria-hidden="true"></ion-icon>
                     <span>Dashboard</span>
                 </li>
                 <li class="nav-item">
-                    <span><ion-icon name="document-text"></ion-icon></span>
+                    <ion-icon name="document-text" aria-hidden="true"></ion-icon>
                     <span>Portfolio</span>
                 </li>
                 <li class="nav-item">
-                    <span><ion-icon name="repeat"></ion-icon></span>
+                    <ion-icon name="repeat" aria-hidden="true"></ion-icon>
                     <span>Transaction</span>
                 </li>
                 <li class="nav-item">
-                    <span><ion-icon name="map"></ion-icon></span>
+                    <ion-icon name="map" aria-hidden="true"></ion-icon>
                     <span>Saving Plan</span>
                 </li>
                 <li class="nav-item">
-                    <span><ion-icon name="diamond"></ion-icon></span>
+                    <ion-icon name="diamond" aria-hidden="true"></ion-icon>
                     <span>Mutual Funds</span>
                 </li>
                 <li class="nav-item">
-                    <span><ion-icon name="settings"></ion-icon></span>
+                    <ion-icon name="settings" aria-hidden="true"></ion-icon>
                     <span>Settings</span>
                 </li>
             </ul>
             <ul class="sidebar-footer">
                 <li class="footer-item">
-                    <span><ion-icon name="help-circle"></ion-icon></span>
+                    <ion-icon name="help-circle" aria-hidden="true"></ion-icon>
                     <span>Help Center</span>
                 </li>
                 <li class="footer-item">
-                    <span><ion-icon name="headset"></ion-icon></span>
+                    <ion-icon name="headset" aria-hidden="true"></ion-icon>
                     <span>Customer Care</span>
                 </li>
                 <li class="footer-item">
-                    <span><ion-icon name="log-out"></ion-icon></span>
+                    <ion-icon name="log-out" aria-hidden="true"></ion-icon>
                     <span>Sign Out</span>
                 </li>
             </ul>
@@ -81,12 +84,15 @@
         <main class="main">
             <header class="main-header">
                 <div>
-                    <h1>Welcome Back Ali Oumlal</h1>
+                    <h1>Welcome Back Ali O.</h1>
                     <p>Happy to see you again. Get update of your asset today.</p>
                 </div>
 
                 <div>
-                    <button><ion-icon name="cloud-download"></ion-icon><span>Download Report</span></button>
+                    <button>
+                        <ion-icon name="cloud-download" aria-hidden="true"></ion-icon>
+                        <span>Download Report</span>
+                    </button>
                 </div>
             </header>
             <section class="statistics-container">
@@ -94,7 +100,7 @@
                 <div class="card col-4">
                     <div class="card-header">
                         <h5>My Investment Asset</h5>
-                        <ion-icon name="layers"></ion-icon>
+                        <ion-icon name="layers" aria-hidden="true"></ion-icon>
                     </div>
                     <div class="card-body">
                         <span class="asset">178,975</span>
@@ -105,7 +111,7 @@
                 <div class="card col-4">
                     <div class="card-header">
                         <h5>Year Profits</h5>
-                        <ion-icon name="medal"></ion-icon>
+                        <ion-icon name="medal" aria-hidden="true"></ion-icon>
                     </div>
                     <div class="card-body">
                         <span class="asset">88,742</span>
@@ -116,7 +122,7 @@
                 <div class="card col-4">
                     <div class="card-header">
                         <h5>Profit Margin</h5>
-                        <ion-icon name="code-working"></ion-icon>
+                        <ion-icon name="code-working" aria-hidden="true"></ion-icon>
                     </div>
                     <div class="card-body">
                         <span class="asset">48,632</span>
@@ -139,7 +145,7 @@
                             <div class="header">
                                 <span>$178,975</span>
                                 <div>
-                                    <span>6.75% <ion-icon name="trending-up"></ion-icon></span>
+                                    <span>6.75% <ion-icon name="trending-up" aria-hidden="true"></ion-icon></span>
                                     <span>This month</span>
                                 </div>
                             </div>
@@ -151,7 +157,7 @@
                             </div>
                             <div class="footer">
                                 <div class="item">
-                                    <ion-icon name="ellipse" class="clr-primary"></ion-icon>
+                                    <ion-icon name="ellipse" class="clr-primary" aria-hidden="true"></ion-icon>
                                     <span>Money Market</span>
                                 </div>
                                 <div class="value">
@@ -160,7 +166,7 @@
                                 <div class="percentage">32%</div>
 
                                 <div class="item">
-                                    <ion-icon name="ellipse" class="clr-purple"></ion-icon>
+                                    <ion-icon name="ellipse" class="clr-purple" aria-hidden="true"></ion-icon>
                                     <span>Stocks</span>
                                 </div>
                                 <div class="value">
@@ -169,7 +175,7 @@
                                 <div class="percentage">18%</div>
 
                                 <div class="item">
-                                    <ion-icon name="ellipse" class="clr-lt-green"></ion-icon>
+                                    <ion-icon name="ellipse" class="clr-lt-green" aria-hidden="true"></ion-icon>
                                     <span>Bonds</span>
                                 </div>
                                 <div class="value">
@@ -179,7 +185,7 @@
 
 
                                 <div class="item">
-                                    <ion-icon name="ellipse" class="clr-secondary"></ion-icon>
+                                    <ion-icon name="ellipse" class="clr-secondary" aria-hidden="true"></ion-icon>
                                     <span>Sharia</span>
                                 </div>
                                 <div class="value">
@@ -221,7 +227,7 @@
 
                         <div class="filters">
                             <button>
-                                <ion-icon name="options"></ion-icon>
+                                <ion-icon name="options" aria-hidden="true"></ion-icon>
                                 Filters
                             </button>
                             <button class="active">
@@ -291,7 +297,7 @@
                             <p>Saving plan based on your needs.</p>
                         </div>
                         <div>
-                            <ion-icon name="ellipsis-vertical"></ion-icon>
+                            <ion-icon name="ellipsis-vertical" aria-hidden="true"></ion-icon>
                         </div>
                     </div>
                     <div class="card-body">
