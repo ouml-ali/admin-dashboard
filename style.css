@@ -112,6 +112,27 @@ span {
     grid-gap: 8px;
 }
 
+ion-icon[name=logo-octocat] {
+  color: var(--clr-primary-400);
+  animation: scale 1.5s linear infinite;
+}
+
+@keyframes scale {
+  0%, 100% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.5);
+  }
+}
+
+ion-icon[name=logo-octocat]:hover{
+  color:var(--clr-accent-400);
+  cursor: pointer;
+  transform: scale(1.5);
+  animation: none;
+}
+
 .header > input[type=search] {
   appearance: none;
   border: 1px solid var(--clr-neutral-300);
